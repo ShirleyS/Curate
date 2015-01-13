@@ -1,0 +1,217 @@
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Find reviews for your resources</div>
+
+<!-- SEARCH FORM -->
+
+                  <form name="search" id="searchForm" action="/search/:term" method="get" novalidate>
+                      <div class="row">
+                          <div class="col-md-8 col-md-offset-2">
+                              <div class="form-group">
+                                  <input type="text" class="form-control" placeholder="Insert a link or a tag" id="name"  name="resources[term]">
+                                  <p class="help-block text-danger"></p>
+                              </div>
+                          </div>
+                      </div>
+                    <input type="submit" class="page-scroll btn btn-xl" name="search" value="Search"></input>
+                  </form>
+
+
+                <div class="intro-heading">Curate your Learning</div>
+
+            </div>
+        </div>
+    </header>
+
+
+
+<!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">About</h2>
+                    <h3 class="section-subheading text-muted"><a href="/resources">Hi Everyone. I'm talking to you, brown pocket mice.</a></h3>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                    <img src="/img/collect.png">
+                    </span><br><br>
+                    <h4 class="service-heading" >Collect.</h4>
+                    <p class="text-muted">Feel free to rate resources through our site, or head over to the <a href="">Google app store</a> to download our neat little Chrome extension. Use it to bookmark, rate, and annotate resources you've found.</p>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                    <img src="/img/rate.png">
+                    </span>
+                    <br>
+                    <br>
+                    </span>
+                    <h4 class="service-heading">Rate</h4>
+                    <p class="text-muted">Stumble across a resource you love and want to share? Help your fellow person out and just do it.</p>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                    <img src="/img/learn.png">
+                    </span>
+                     
+                      <br>
+                      <br>
+                    </span>
+                    <h4 class="service-heading">Learn Better</h4>
+                    <p class="text-muted">Why waste time on bad resources? Find the crowdsourced consensus on learning materials that matters most to you.</p>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+  <!-- About Section -->
+  <!-- recommendations Grid Section -->
+    <section id="explore" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Explore:</h2>
+                    <h3 class="section-subheading text-muted">The story so far.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 explore-item">
+                    <a href="#exploreModal1" class="explore-link" data-toggle="modal">
+                        <div class="explore-hover">
+                            <div class="explore-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="/img/cooking.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="explore-caption">
+                        <h4>Cooking</h4>
+                        <p class="text-muted">Make the perfect meatloaf.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 explore-item">
+                    <a href="#exploreModal2" class="explore-link" data-toggle="modal">
+                        <div class="explore-hover">
+                            <div class="explore-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="../img/front.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="explore-caption">
+                        <h4>Frontend Design</h4>
+                        <p class="text-muted">Atomic CSS, I guess</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 explore-item">
+                    <a href="#exploreModal3" class="explore-link" data-toggle="modal">
+                        <div class="explore-hover">
+                            <div class="explore-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="../img/stats.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="explore-caption">
+                        <h4>Statistics</h4>
+                        <p class="text-muted">P(x; μ) = (e-μ) (μx) / x!</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- recommendationss Grid Section -->
+    <section id="recommendations" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">recommendations:</h2>
+                    <h3 class="section-subheading text-muted">Based on your history of ratings. <br>
+                     <a href="/recommendations">See More.</a></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 recommendations-item">
+                    <a href="#recommendationsModal1" class="recommendations-link" data-toggle="modal">
+                        <div class="recommendations-hover">
+                            <div class="recommendations-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="../img/recommendations/roundicons.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="recommendations-caption">
+                        <h4>Databases</h4>
+                        <p class="text-muted">Select * from table</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 recommendations-item">
+                    <a href="#recommendationsModal2" class="recommendations-link" data-toggle="modal">
+                        <div class="recommendations-hover">
+                            <div class="recommendations-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/recommendations/startup-framework.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="recommendations-caption">
+                        <h4>Finance</h4>
+                        <p class="text-muted">Chicago Bulls vs Chicago Bears</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 recommendations-item">
+                    <a href="#recommendationsModal3" class="recommendations-link" data-toggle="modal">
+                        <div class="recommendations-hover">
+                            <div class="recommendations-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="../img/recommendations/treehouse.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="recommendations-caption">
+                        <h4>Craft</h4>
+                        <p class="text-muted">Knitting and Stuff</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+

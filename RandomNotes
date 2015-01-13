@@ -1,0 +1,57 @@
+Random Notes
+
+<form action="/events/create" method="post">
+  <p>Organizer Name:<input type="text" name="organizer_name" value= <%= @event.organizer_name if @event %>></p>
+  <p>Organizer Email:<input type="text" name="organizer_email" value= <%= @event.organizer_email  if @event %>></p>
+  <p>Title:<input type="text" name="title" value= <%= @event.title  if @event %>></p>
+  <p>Date:<input type="date" name="date" value= <%= @event.date  if @event %>></p>
+  <input type="submit">
+</form>
+
+<% if @errors %>
+  <% @errors.messages.each do |x| %>
+  <%= x[0] %> - <%= x[1][0] %>
+  <br>
+  <% end %>
+  <br>
+<% end %>
+
+
+
+
+  <div>
+
+    <ul>
+      <% @selection.each do |resource| %>
+      <li>
+        <a href=""><%=resource.title%></a> - <%=resource.comment%>
+      </li>
+      <% end %>
+    </ul>
+
+  </div>
+
+
+inside form
+
+required data-validation-required-message="Please enter your name."
+
+
+Search/ajax
+    // <script src="/js/search.js"></script>
+
+
+
+ col-md-offset-1    
+
+
+
+
+ for the delete... changed bc cssˇ
+
+  <form action="/signout/<%= session[:user_id] %>" method="post">
+                  
+                            <input name="_method" type="hidden" value="delete" />
+                            <input class="btn" type="submit" value="Sign Out">
+                            
+                        </form>

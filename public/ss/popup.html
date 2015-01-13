@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                min-width: 180px;
+                overflow-x: hidden;
+                font-family: Arial, sans-serif;
+                font-size: 16px;
+                font-variant: bold;
+                background-image: url("https://avatars1.githubusercontent.com/u/5696249?v=3&s=460");]
+                background-size: 200px;
+                color: pink;
+
+
+            }
+            input, textarea {
+                width: 190px;
+            }
+            input#save {
+                font-weight: bold; width: auto;
+            }
+
+            input#cancel {
+                font-weight: bold; width: auto;
+            }
+
+            /*<!--STARS COPIED FROM SOME RUSSIAN TUTORIAL-->*/
+            /*Note to self: Shows number of stars across repeated*/
+            .stars{
+                width: 130px;
+                height: 26px;
+                background: url(http://sandbox.bumbu.ru/ui/external/stars.png) 0 0 repeat-x;
+                position: relative;
+            }
+
+            .stars .rating{
+                height: 26px;
+                background: url(http://sandbox.bumbu.ru/ui/external/stars.png) 0 -26px repeat-x;
+            }
+            /*Note to self: Hides bubble buttons*/
+            .stars input{
+                display: none;
+            }
+
+            .stars label{
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 26px;
+                width: 130px;
+                cursor: pointer;
+            }
+            .stars:hover label{
+                display: block;
+            }
+            .stars label:hover{
+                background: url(http://sandbox.bumbu.ru/ui/external/stars.png) 0 -52px repeat-x;
+            }
+            /*Note to self: One star, repeated, then spacing used on repeat, ie starts on 2*/
+            .stars label + input + label{width: 104px;}
+            .stars label + input + label + input + label{width: 78px;}
+            .stars label + input + label + input + label + input + label{width: 52px;}
+            .stars label + input + label + input + label + input + label + input + label{width: 26px;}
+
+            .stars input:checked + label{
+                display: block;
+                background: url(http://sandbox.bumbu.ru/ui/external/stars.png) 0 -52px repeat-x;
+            }
+        /*END STARS*/
+        </style>
+
+        <script src="jquery-2.1.1.min.js"></script>
+        <script src="popup.js"></script>
+        <script src="event.js"></script>
+        <script src="content.js"></script>
+        <script src="graburl.js"></script>
+
+    </head>
+
+    <body>
+
+  
+
+      <form id="addResource">
+        <p><label for="title">Title</label><br />
+        <input type="text" id="title" name="title" value="" /></p>
+        <p><label for="url">Url</label><br />
+        <input type="text" id="url" name="url" value= "url" /></p>
+
+
+        <div class="stars">
+          <div class="rating" style="width:0%"></div>
+          <input type="radio" name="rating" id="star5" value="5">
+          <label for="star5"></label>
+          <input type="radio" name="rating" id="star4" value="4">
+          <label for="star4"></label>
+          <input type="radio" name="rating" id="star3" value="3">
+          <label for="star3"></label>
+          <input type="radio" name="rating" id="star2" value="2">
+          <label for="star2"></label>
+          <input type="radio" name="rating" id="star1" value="1">
+          <label for="star1"></label>
+        </div>
+
+<!-- TRACE THIS DIV LATER -->
+      </div>
+
+        <p><label for="comment">Comments (highlight on page to quote)</label><br />
+        <textarea id="comment" name="resource[comment]" rows="10"></textarea></p>
+        <p><label for="tags">Tags</label><br />
+        <input type="text" id="tags" name="resource[tag]" size="50" value="" /></p>
+        <p>
+          <input id="cancel" type="submit" value="Cancel" />
+          <input id="save" type="submit" value="Save Resource" />
+          <span id="status-display"></span>
+        </p>
+      </form>
+    </body>
+
+</html>
+
+
+

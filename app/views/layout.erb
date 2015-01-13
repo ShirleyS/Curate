@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Agency - Start Bootstrap Theme</title>
+
+
+
+    <!-- CSS -->
+    <link href="/css/agency.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+
+
+
+
+
+
+        <script src="jquery-2.1.1.min.js"></script>
+        <script src="popup.js"></script>
+        <script src="event.js"></script>
+        <script src="content.js"></script>
+        <script src="graburl.js"></script>
+
+ 
+
+
+
+
+
+
+
+<!--
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/application.css"> -->
+
+    <script src="/ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/js/application.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5
+    elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+        <style>
+            
+            input, textarea {
+                width: 190px;
+            }
+            input#save {
+                font-weight: bold; width: auto;
+            }
+
+            input#cancel {
+                font-weight: bold; width: auto;
+            }
+
+            /*<!--STARS COPIED FROM SOME RUSSIAN TUTORIAL-->*/
+            /*Note to self: Shows number of stars across repeated*/
+            .stars{
+                width: 130px;
+                height: 26px;
+                background: url(http://sandbox.bumbu.ru/ui/external/stars.png) 0 0 repeat-x;
+                position: relative;
+            }
+
+            .stars .rating{
+                height: 26px;
+                background: url(http://sandbox.bumbu.ru/ui/external/stars.png) 0 -26px repeat-x;
+            }
+            /*Note to self: Hides bubble buttons*/
+            .stars input{
+                display: none;
+            }
+
+            .stars label{
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 26px;
+                width: 130px;
+                cursor: pointer;
+            }
+            .stars:hover label{
+                display: block;
+            }
+            .stars label:hover{
+                background: url(http://sandbox.bumbu.ru/ui/external/stars.png) 0 -52px repeat-x;
+            }
+            /*Note to self: One star, repeated, then spacing used on repeat, ie starts on 2*/
+            .stars label + input + label{width: 104px;}
+            .stars label + input + label + input + label{width: 78px;}
+            .stars label + input + label + input + label + input + label{width: 52px;}
+            .stars label + input + label + input + label + input + label + input + label{width: 26px;}
+
+            .stars input:checked + label{
+                display: block;
+                background: url(http://sandbox.bumbu.ru/ui/external/stars.png) 0 -52px repeat-x;
+            }
+        /*END STARS*/
+        </style>
+
+</head>
+
+<body id="page-top" class="index">
+
+
+ <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" id="#page-top" href="/"><strong>Curate</strong></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+
+                    <li>
+                        <a class="page-scroll" href="/resources">Explore</a>
+                    </li>
+
+
+                    <li>
+                        <a class="page-scroll" href="/recommendations">recommendations</a>
+                    </li>
+
+                    <% unless session[:user_id] %>
+                    
+                        <li>
+                          <a href="/signin">SIGN IN</a>
+                        </li>
+
+                        <li>
+                          <a href="/signup">SIGN UP</a>
+                        </li>
+
+                    <% else %>
+                        <li>
+                           <a href="/signout">SIGN OUT</a>
+                        </li>
+                    <% end %>
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+    <br>
+
+    <br>
+
+      <%= yield %>
+    <br>
+    <br>
+    <br>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Curate 2014</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="#">Privacy Policy</a>
+                        </li>
+                        <li><a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="/js/classie.js"></script>
+    <script src="/js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="/js/jqBootstrapValidation.js"></script>
+
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/js/agency.js"></script>
+
+
+
+  </body>
+</html>
