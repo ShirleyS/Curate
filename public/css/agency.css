@@ -981,3 +981,14 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #fed136;
 }
+
+
+
+.numright {
+    float: right;
+}
+.numleft {
+    float: left;
+}
+
+

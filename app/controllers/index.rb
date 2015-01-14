@@ -16,15 +16,22 @@ get '/resources' do
   #TODO IMPLEMENT ME
 
 
-    @results = Resource.where(url: @search_term)
-    @comments = Comment.where(resource_id: @results)
+  @results = Resource.where(url: @search_term)
+  @comments = Comment.where(resource_id: @results)
 
-    @rating_avg = @results.average('rating').to_s
+  @rating_avg = @results.average('rating').to_s
 
-    # @user = @results.find_by(user_id: results.user_id)
-  
-  
+  # Quick hack. Will add more than one in the future.  
   @resources = Resource.all
+
+  @r=Resource.includes(:comments).last
+  @comment=Comment.includes(:resource).last
+
+  # @comment.each_with_index do |com,i| 
+     @com=@comment
+     @res=Resource.find(@comment.id)
+  # end
+  
   erb :resources
 end
 
@@ -72,6 +79,12 @@ get '/search/:term' do
     @rating_avg = @results.average('rating').to_s
     @result_url = @results.last.url
     # @user = @results.find_by(user_id: results.user_id)
+  
+    @comment=Comment.includes(:resource).last
+    # @comment.each_with_index do |com,i| 
+    @com=@comment
+    @res=Resource.find(@comment.id)
+
   end 
 
   erb :results

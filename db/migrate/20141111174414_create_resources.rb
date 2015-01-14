@@ -4,7 +4,7 @@ class CreateResources < ActiveRecord::Migration
       t.string :title, :url
       t.integer :rating
       t.integer :user_id
-
+      t.integer :comment_id
 
       t.timestamps
     end

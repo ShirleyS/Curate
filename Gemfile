@@ -20,9 +20,10 @@ gem 'shotgun'
 gem 'rack-flash3'
 
 gem 'rspec'
+gem 'rspec-support', '~> 3.1.0'
 
 
 group :development, :test do
-	gem 'rspec'
+	# gem 'rspec'
   gem 'faker'
 end

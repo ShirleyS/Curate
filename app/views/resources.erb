@@ -2,58 +2,34 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Recent Reviews</h2>
+                <h2 class="section-heading">Most Recent Review</h2>
 
         <% if @resources %>
-                
-                <h3 class="section-subheading text-muted"><a href="/signup">Here you go. Yup.</a></h3>
+                <h3 class="section-subheading text-muted"><a href="/signup">Here you go. Most recent review. Yup.</a></h3>
             </div>
         </div>
 
 
-        <div class="col-md-4 ">
-            <h3>
-            <% @resources.reverse.each do |resource|%></h3>
-            <a href="<%= resource.url %>"><%= resource.title %></a>
-            rating : <%= resource.rating %>
-<br>            <br>
-            <% end %>
-
+        <div class="col-md-12 ">
+            <h3><%=  @res.title %> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <a href="<%= @res.url %>"><%= @res.url %></a></h3>
+               <h4>Rating: <%= @res.rating %>/5 </h4>
+               <br>
         
+           <%= @com.comment %> 
+
+            <br><br>
+
 
         </div>
         <% end %>
 
 
-        <div class="col-md-6 col-md-offset-2 text-left">
-           
-            <% if @comments %>
-                <div></div>
-                <% @comments.each do |comment| %>
-          
-                 <br><br>
-
-                <%= comment.comment %>
-
-                 <% end %>
-            <% else %>
-
-            <% end %>
-
-        </div>
-     
-     
-
+        
     </div>
-
-            
-    
-
 
 
      <div class="clearfix"></div>
-
-                
+            
      
     </div>
 </section>
