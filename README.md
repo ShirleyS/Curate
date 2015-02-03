@@ -36,9 +36,9 @@ If you would like to use the demo, you will have to download Sinatra.  After tha
 Working features:
 
 -Chrome Extension Popup which will post to a db.
-<.app/public/img/popupGrab.png>
+<img src = ".app/public/img/popupGrab.png">
 -Stylized Bootstrap.
-<..app/public/img/indexGrab.png>
+<img src = "..app/public/img/indexGrab.png">
 -Login/Logout (site only).
 
 -Sinatra Site
