@@ -12,7 +12,9 @@ You can build anything you want, provided that it meets the following requiremen
 
 *******
 
-This is still in demo only phase. Not all sections are built out. My main goal was to create a basic operable chrome extension that saved links with comments to one place. The site and rating system were afterthoughts that I will have to revisit at a later time. The idea of the site is a place that you can go toss your educational link at, and have it tell you the crowdsourced quality of the resource, and help one decide if it would be worth investing the time to utilize that resource. Prior to this, I had no experience with Bootstrap or building Chrome Extensions.
+This is still in demo only phase. Not all sections are built out. Given the limited time available, my main goal was to create a basic operable chrome extension that saved links with comments to one place. The site and rating system were afterthoughts that will be revisited at a later time. 
+
+The idea of the site is a place that you can go toss your educational resource link at, have it tell you the crowdsourced quality of the resource, and help one decide if it would be worth investing the time to utilize that resource. Prior to this, I had no experience with Bootstrap or building Chrome Extensions.
 
 This project uses Ruby, Sinatra, Javascript, Jquery, the Chrome Extension Library, and Bootstrap. 
 
@@ -45,11 +47,11 @@ Working features:
 
 -Login/Logout (site only).
 
--Sinatra Site
+-Working Sinatra Site
 
 
 *******
-Still requires the following:
+Todos:
 
 -Move authentication for the plugin to server side. 
 
