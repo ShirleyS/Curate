@@ -1,10 +1,13 @@
-###Prompt:
+Prompt:
 
 You can build anything you want, provided that it meets the following requirements:
 
 - It has a database
+
 - It uses an API
+
 - It is styled
+
 - It utilizes JavaScript
 
 *******
@@ -15,28 +18,53 @@ This project uses Ruby, Sinatra, Javascript, Jquery, the Chrome Extension Librar
 
 *******
 If you would like to use the demo, you will have to download Sinatra.  After that: 
+
 -Go to Chrome, hit the hamburger icon (three horizontal lines) in the top right corner.
+
 -Hit "More Tools, then "Extensions". 
+
 -Then hit the button "Load Unpacked Extension" 
+
 -Click the app folder, then public, then you will select the folder "ss".  This will should load the extension. It is a pink and orange "C" icon.  
+
 -run the command in the terminal "rake db:drop; rake db:create; rake db:migrate; rake db:seed".
+
 -To run the localhost, you should use "shotgun" in the project folder and then go to "localhost:9393".
 
 *******
 
+Working features:
+
+-Chrome Extension Popup which will post to a db.
+
+-Stylized Bootstrap.
+
+-Login/Logout (site only).
+
+-Sinatra Site
+
+
+*******
 Still requires the following:
 
 -Move authentication for the plugin to server side. 
+
 -Ajax call for plugin should be changed so as to not depend on the ajax call/jquery library.
+
 -Clean up code
+
 -Styling changes
+
 -Creating individual user profile page. (Login not really being utilized at this point)
+
 -Adding some sort of recommendation system
+
 -Add fuzzy elastic search.
+
 -Maybe incorporate the rating into the extension, so that you can see what other people have written directly from that page.
 
 ******
-I'd suggest the following steps to demo the extension:
+I would suggest the following steps to demo the extension:
 
 Go to any site. Click the icon, and input text.  Save your completed form.  As the most recent submitted link, this should now be the link shown in the "Explore" tab of the site. As more reviews get sent to the site, an average rating will change, and other reviews will also be posted.
 
