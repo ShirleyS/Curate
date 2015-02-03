@@ -7,7 +7,7 @@ You can build anything you want, provided that it meets the following requiremen
 - It is styled
 - It utilizes JavaScript
 
-####
+*******
 
 This is still in demo only phase. Not all sections are built out. My main goal was to create a basic operable chrome extension that saved links with comments to one place. The site and rating system were afterthoughts that I will have to revisit at a later time. The idea of the site is a place that you can go toss your educational link at, and have it tell you the crowdsourced quality of the resource, and help one decide if it would be worth investing the time to utilize that resource. Prior to this, I had no experience with Bootstrap or building Chrome Extensions.
 
@@ -22,7 +22,7 @@ If you would like to use the demo, you will have to download Sinatra.  After tha
 -run the command in the terminal "rake db:drop; rake db:create; rake db:migrate; rake db:seed".
 -To run the localhost, you should use "shotgun" in the project folder and then go to "localhost:9393".
 
-
+*******
 
 Still requires the following:
 
